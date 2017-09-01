@@ -1,0 +1,191 @@
+.header {
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+.header h2 {
+    margin: 0;
+    padding: 20px 0;
+}
+
+button.add {
+    float: right;
+    margin-top: 15px;
+}
+
+@media (max-width: 1139px) {
+
+    .header {
+        margin: 0 auto 20px;
+        padding: 0;
+    }
+
+    .header h2 {
+        margin-left: 10px!important;
+    }
+
+    button.add {
+        margin-right: 10px;
+    }
+}
+
+.selected {
+    background-color: #fff !important;
+    color: #ccc;
+}
+
+/* Users List */
+
+.users {
+    margin: 20px 0 20px 0;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    float: left;
+}
+
+.users li {
+    cursor: pointer;
+    position: relative;
+    background-color: #EEE;
+    line-height: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 22%;
+    margin-right: 3%;
+    display: block;
+    float: left;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+
+    .users li {
+        width: 45%;
+        margin: 0 2.5% 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .users {
+        margin: 0 0 2em 0;
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        float: left;
+        border: 0 !important;
+    }
+
+    .users li {
+        width: 95%;
+        margin-right: 5%;
+    }
+}
+
+/*  Hover States Edit / Delete */
+
+.users li span i {
+    font-style: normal;
+}
+
+.users li i.closed {
+    display: none;
+}
+
+.users li.selected i.closed {
+    display: inline-block;
+}
+
+.users li i.edit-me {
+    display: inline-block;
+}
+
+.users li.selected i.edit-me {
+    display: none;
+}
+
+.users li div {
+    clear: both;
+}
+
+.users li .options {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    margin: 0;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    z-index: 10;
+}
+
+.users li .options span {
+    margin: 30px 0px;
+    display: block;
+}
+
+.users li:hover .options {
+    display: block;
+}
+
+.users li.selected .options {
+    display: block;
+}
+
+.users li:hover .options span.edit {
+    color: #fff;
+}
+
+.users li:hover .options span.edit:hover {
+    color: #ccc;
+}
+
+.users li:hover .options span.delete {
+    color: red;
+}
+
+.users li:hover .options span.delete:hover {
+    color: #f75e3a;
+}
+
+.users li.selected:hover {
+    color: white;
+}
+
+.users li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+
+/* List Styles */
+
+.users .row {
+    line-height: 27px;
+    font-size: 14px;
+}
+
+.users .title {
+    display: block;
+    color: white;
+    padding: 10px;
+    background-color: #466473;
+    position: relative;
+    min-width: 40px;
+    text-align: left;
+    float: left;
+    margin-right: 10px;
+}
+
+.users .value {
+    padding: 10px 0;
+    display: block;
+    float: left;
+    clear: right;
+}

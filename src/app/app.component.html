@@ -1,0 +1,27 @@
+
+<header class="header">
+    <div class="wrapper">
+        <button class="add" (click)="onAddClick(user)">+ Add Employee</button>
+        <h2>Company Directory</h2>
+    </div>
+</header>
+
+<div class="wrapper">
+    <ul class="users">
+        <li *ngFor="let user of users"
+        [class.selected]="user === selectedUser">
+
+            <div class="options">
+                <span class="edit" (click)="onEditClick(user)"><i class="closed">Close</i><i class="edit-me">Edit</i></span>
+                <span class="delete" (click)="onDeleteClick(user)">Delete</span>
+            </div>
+
+            <div class="row"><span class="title">Name</span><span class="value">{{user.name}}</span> </div>
+            <div class="row"><span class="title">Title</span><span class="value">{{user.title}}</span> </div>
+            <div class="row"><span class="title">Phone</span><span class="value">{{user.phone}}</span> </div>
+            <div class="row"><span class="title">Office</span><span class="value">{{user.office}}</span> </div>
+        </li>
+    </ul>
+</div>
+
+<user-detail [user]="selectedUser" (onClosed)="onEditClick($event)"></user-detail>

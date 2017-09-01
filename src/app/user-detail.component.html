@@ -1,0 +1,10 @@
+
+<div class="overlay" *ngIf="user" (click)="onCloseClick(user)"></div>
+<div class="form-wrap" *ngIf="user">
+    <button class="close-btn" (click)="onCloseClick(user)">Close</button>
+    <h2> Edit Details</h2>
+    <div><span class="title">Name</span><input [(ngModel)]="user.name" placeholder="Name"/> </div>
+    <div><span class="title">Title</span><input [(ngModel)]="user.title" placeholder="Title"/> </div>
+    <div><span class="title">Phone</span><input [(ngModel)]="user.phone" placeholder="Phone"/> </div>
+    <div><span class="title">Office</span><input [(ngModel)]="user.office" placeholder="Office"/></div>
+</div>
